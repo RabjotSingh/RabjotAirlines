@@ -1,0 +1,53 @@
+<form [formGroup]="flightsearchform" (ngSubmit)="onSubmit()">
+    <div class="container">
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+            <label for="sourcelocation" class="form-label">From</label> &nbsp;
+            <input type="text" id="sourcelocation" name="sourcelocation" formControlName="sourcelocation">
+            </div>
+        
+            <div class="col-3">
+            <label for="destinationlocation" class="form-label">To</label> &nbsp;
+            <input type="text" id="destinationlocation" name="destinationlocation" formControlName="destinationlocation">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+            <label for="departuredate" class="form-label">Departure</label> &nbsp;
+            <input type="date" id="departuredate" name="departuredate" formControlName="departuredate">
+            </div>
+            <div class="col-3">
+            <label for="returndate" class="form-label">Return</label> &nbsp;
+            <input type="date" id="returndate" name="returndate" formControlName="returndate">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+            <label for="passengers" class="form-label">Number of Travellers</label> &nbsp;
+            <select id="passengers" name="passengers" formControlName="passengers">
+            <option *ngFor="let p of nofpass">{{p}}</option>
+            </select>
+            </div>
+            <div class="col-3">
+            <label for="travelclass" class="form-label">Class</label> &nbsp;
+            <select id="travelclass" name="travelclass" formControlName="travelclass">
+            <option *ngFor="let t of tclass">{{t}}</option>
+            </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-end">
+        <div class="col-4">
+        <p><button type="submit" class="btn btn-primary">Search Flights</button></p>
+        </div>
+    </div>
+    </div>
+</form>

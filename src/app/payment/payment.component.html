@@ -1,0 +1,63 @@
+<form [formGroup]="paymentsform" (ngSubmit)="onSubmit()">
+    <div class="container">
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-2">
+            <p><button class="btn btn-primary">Debit Card</button></p>
+            </div>
+            <div class="col-3">
+            <p><button class="btn btn-primary">Credit Card</button></p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-6">
+            <label for="emailaddress" class="form-label">Email</label> &nbsp;
+            <input type="email" id="emailadddress" name="emailaddress" formControlName="emailaddress" placeholder="Enter Your Email">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-6">
+            <label for="nameoncard" class="form-label">Name on Card</label> &nbsp;
+            <input type="text" id="nameoncard" name="nameoncard" formControlName="nameoncard" placeholder="Full name as on Card">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-6">
+            <label for="cardnumber" class="form-label">Card Number</label> &nbsp;
+            <input type="text" id="cardnumber" name="cardnumber" formControlName="cardnumber" placeholder="Card Number">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-3">
+            <label for="expirydate" class="form-label">Expiry</label> &nbsp;
+            <input type="date" id="expirydate" name="expirydate" formControlName="expirydate">
+            </div>
+            <div class="col-3">
+            <label for="cvv" class="form-label">CVV</label> &nbsp;
+            <input type="password" id="cvv" name="cvv" formControlName="cvv" placeholder="CVV">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+            <p><button type="submit" class="btn btn-primary">Pay Now</button></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
+<h5 style="text-align:center; color: red;"> Do not refresh the page during Transaction </h5>
+<h5 style = "text-align: center; color: red;">Do not open new window or change the window during Transaction</h5>
